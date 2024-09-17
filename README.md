@@ -132,3 +132,12 @@ sysctl -n hw.ncpu
 gzip on;
 gzip_min_length 1000;
 ```
+## nginxを停止
+- 全ての接続を強制的に終了してnginxを即座に停止させる
+```
+nginx -s stop
+```
+- 接続中のリクエストを処理し終わってからnginxを停止させる
+```
+nginx -s quit
+```
